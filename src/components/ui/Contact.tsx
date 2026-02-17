@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 import { Mail, Linkedin, Github } from "lucide-react";
 import emailjs from '@emailjs/browser';
 import { toast } from "sonner";

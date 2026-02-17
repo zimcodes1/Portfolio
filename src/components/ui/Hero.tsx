@@ -1,5 +1,4 @@
-import React from "react";
-import { Github, Linkedin, Mail, Twitter, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import XLogo from "./XLogo";
 const Hero = () => {
 	return (

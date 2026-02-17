@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AnimatedBackground = () => {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
