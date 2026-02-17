@@ -6,12 +6,12 @@ const Footer = () => {
 	const socialLinks = [
 		{
 			name: "GitHub",
-			url: "https://github.com/Azimeh",
+			url: "https://github.com/zimcodes1",
 			icon: <Github className="w-5 h-5" />,
 		},
 		{
 			name: "LinkedIn",
-			url: "https://www.linkedin.com/azimeh",
+			url: "https://www.linkedin.com/in/azimeh",
 			icon: <Linkedin className="w-5 h-5" />,
 		},
 		{ name: "X", url: "https://x.com/azimeho", icon: <XLogo /> },
