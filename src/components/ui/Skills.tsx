@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
+import { Code2, Server, Wrench, Shield } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
+      icon: <Code2 className="w-6 h-6" />,
       skills: [
         { name: "ReactJS", level: 90, tier: "Advanced" },
         { name: "TypeScript", level: 70, tier: "Intermediate" },
@@ -12,7 +14,8 @@ const Skills = () => {
       ]
     },
     {
-      title: "Backend Development", 
+      title: "Backend Development",
+      icon: <Server className="w-6 h-6" />,
       skills: [
         { name: "Node.js", level: 88, tier: "Advanced" },
         { name: "Python", level: 80, tier: "Proficient" },
@@ -22,6 +25,7 @@ const Skills = () => {
     },
     {
       title: "Developer Tools & Deployment",
+      icon: <Wrench className="w-6 h-6" />,
       skills: [
         { name: "Git & GitHub", level: 85, tier: "Proficient" },
         { name: "Vercel", level: 80, tier: "Proficient" },
@@ -31,6 +35,7 @@ const Skills = () => {
     },
     {
       title: "Cybersecurity",
+      icon: <Shield className="w-6 h-6" />,
       skills: [
         { name: "Network Security", level: 20, tier: "Beginner" },
         { name: "Penetration Testing", level: 15, tier: "Beginner" },
@@ -63,9 +68,14 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300"
+              className="bg-gray-800 backdrop-blur-lg p-6 rounded-xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold text-cyan-400 mb-6">{category.title}</h3>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 bg-cyan-500/20 rounded-lg text-cyan-400">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-cyan-400">{category.title}</h3>
+              </div>
               <div className="space-y-4">
                 {category.skills.map((skill, skillIdx) => (
                   <div key={skillIdx}>
