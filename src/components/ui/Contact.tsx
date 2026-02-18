@@ -138,7 +138,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <input
                 type="text"
                 name="name"
-                placeholder="$ echo 'Your Name'"
+                placeholder="Your Name..."
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -148,7 +148,7 @@ const handleSubmit = (e: React.FormEvent) => {
               <input
                 type="email"
                 name="email"
-                placeholder="$ cat email.txt"
+                placeholder="Your email..."
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -157,7 +157,7 @@ const handleSubmit = (e: React.FormEvent) => {
               
               <textarea
                 name="message"
-                placeholder="$ vim message.md"
+                placeholder="Type your message here..."
                 value={formData.message}
                 onChange={handleChange}
                 required

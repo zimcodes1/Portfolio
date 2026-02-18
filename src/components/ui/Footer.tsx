@@ -99,8 +99,8 @@ const Footer = () => {
 				<div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
 					<p className="text-gray-400 text-sm">© {currentYear} Obadiah Azimeh Nasara</p>
 					<div className="flex gap-4 mt-4 md:mt-0">
-						<span className="text-gray-500 text-xs font-mono">
-							git commit -m "Building the future"
+						<span className="text-gray-500 text-xs font-mono select-none pointer-events-none ">
+							git commit -m "Building tomorrow"
 						</span>
 					</div>
 				</div>
