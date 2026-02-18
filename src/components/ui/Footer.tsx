@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import XLogo from "./XLogo";
+import XLogo from "./svgs/XLogo";
+import WhatsAppIcon from "./svgs/WhatsApp";
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
@@ -20,6 +21,11 @@ const Footer = () => {
 			url: "mailto:azimehobadiah1@gmail.com",
 			icon: <Mail className="w-5 h-5" />,
 		},
+		{
+			name: "WhatsApp",
+			url: "https://wa.me/qr/SHDC4BMBJLIKH1",
+			icon: <WhatsAppIcon/>,
+		}
 	];
 
 	return (
@@ -36,8 +42,9 @@ const Footer = () => {
 							</span>
 						</div>
 						<p className="text-gray-400 text-sm leading-relaxed">
-							Building secure, scalable web applications with modern technologies.
-							Fullstack developer with a focus on cybersecurity and clean code.
+							Building secure, scalable web applications with modern
+							technologies. Fullstack developer with a focus on cybersecurity
+							and clean code.
 						</p>
 					</div>
 
@@ -97,7 +104,9 @@ const Footer = () => {
 
 				{/* Bottom Bar */}
 				<div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-					<p className="text-gray-400 text-sm">© {currentYear} Obadiah Azimeh Nasara</p>
+					<p className="text-gray-400 text-sm">
+						© {currentYear} Obadiah Azimeh Nasara
+					</p>
 					<div className="flex gap-4 mt-4 md:mt-0">
 						<span className="text-gray-500 text-xs font-mono select-none pointer-events-none ">
 							git commit -m "Building tomorrow"

@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
-import XLogo from "./XLogo";
+import XLogo from "./svgs/XLogo";
+import WhatsAppIcon from "./svgs/WhatsApp";
 const Hero = () => {
 	return (
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
@@ -73,6 +74,14 @@ const Hero = () => {
 								className="p-2 sm:p-3 bg-gray-800/50 rounded-lg hover:bg-sky-500/20 hover:text-sky-400 text-gray-400 transition-all duration-300 hover:scale-110"
 							>
 								<XLogo />
+							</a>
+														<a
+								href="https://wa.me/qr/SHDC4BMBJLIKH1"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-2 sm:p-3 bg-gray-800/50 rounded-lg hover:bg-green-500/20 hover:text-green-400 text-gray-400 transition-all duration-300 hover:scale-110"
+							>
+								<WhatsAppIcon/>
 							</a>
 						</div>
 					</div>
