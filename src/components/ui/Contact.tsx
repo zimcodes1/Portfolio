@@ -95,7 +95,7 @@ const handleSubmit = (e: React.FormEvent) => {
               
               {/* LinkedIn */}
               <a 
-                href="https://www.linkedin.com/azimeh" 
+                href="https://www.linkedin.com/in/azimeh" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
