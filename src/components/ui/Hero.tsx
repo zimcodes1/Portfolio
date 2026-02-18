@@ -53,7 +53,7 @@ const Hero = () => {
 								<Github className="w-4 h-4 sm:w-5 sm:h-5" />
 							</a>
 							<a
-								href="https://www.linkedin.com/azimeh"
+								href="https://www.linkedin.com/in/azimeh"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="p-2 sm:p-3 bg-gray-800/50 rounded-lg hover:bg-blue-500/20 hover:text-blue-400 text-gray-400 transition-all duration-300 hover:scale-110"
@@ -85,8 +85,11 @@ const Hero = () => {
 							<div className="text-xs text-gray-300">Years Exp</div>
 						</div>
 
+						{/* Gradient Background Div */}
+						<div className="absolute w-64 h-80 sm:w-72 sm:h-[22rem] md:w-80 md:h-96 bg-gradient-to-br from-cyan-500/20 to-green-500/20 rounded-2xl rotate-[15deg]"></div>
+
 						{/* Image */}
-						<div className="w-64 h-80 sm:w-72 sm:h-[22rem] md:w-80 md:h-96 hover:scale-105 md:hover:scale-110 grayscale hover:grayscale-0 overflow-hidden rounded-2xl shadow-2xl transition-all duration-500">
+						<div className="relative w-64 h-80 sm:w-72 sm:h-[22rem] md:w-80 md:h-96 hover:scale-105 md:hover:scale-110 grayscale hover:grayscale-0 overflow-hidden rounded-2xl shadow-2xl transition-all duration-500">
 							<img
 								src="/images/me.jpg"
 								alt="Developer Avatar"
