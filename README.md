@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Azimeh Obadiah Nasara - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Fullstack Developer & Cybersecurity Specialist
 
-Currently, two official plugins are available:
+Professional portfolio showcasing my expertise in React, Node.js, Python, and Cybersecurity.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🌟 Features
 
-## React Compiler
+- **Responsive Design**: Mobile-first approach with seamless experience across all devices
+- **Modern Tech Stack**: Built with React, TypeScript, Tailwind CSS, and Framer Motion
+- **SEO Optimized**: Complete meta tags, Open Graph, Twitter Cards, and structured data
+- **Performance**: Fast loading times with optimized assets and animations
+- **Accessibility**: ARIA labels and semantic HTML for better accessibility
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- Vite
+- EmailJS
+- Lucide React Icons
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📦 Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🏃 Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### 🏗️ Build
+
+```bash
+npm run build
+```
+
+### 🌐 SEO Features
+
+- Meta tags for search engines
+- Open Graph tags for social media sharing
+- Twitter Card support
+- Structured data (JSON-LD) for rich snippets
+- Sitemap.xml for search engine crawling
+- Robots.txt for crawler instructions
+- Semantic HTML and ARIA labels
+
+### 📱 Contact
+
+- **Email**: azimehobadiah1@gmail.com
+- **LinkedIn**: [linkedin.com/in/azimeh](https://www.linkedin.com/in/azimeh)
+- **GitHub**: [github.com/zimcodes1](https://github.com/zimcodes1)
+- **Twitter/X**: [@azimeho](https://x.com/azimeho)
+
+### 📄 License
+
+© 2024 Azimeh Obadiah Nasara. All rights reserved.
+
+---
+
+**Keywords**: Fullstack Developer, React Developer, Node.js, Python, Cybersecurity, Web Development, TypeScript, Portfolio
