@@ -27,11 +27,11 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 z-50 ${
+      className={`fixed bottom-8 max-sm:bottom-22 right-8 max-sm:right-5 p-3 bg-[#05df72] rounded-full z-50 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16 pointer-events-none'
       }`}
     >
-      <ArrowUp className="w-6 h-6 text-white" />
+      <ArrowUp className="w-6 h-6 text-black" />
     </button>
   );
 };

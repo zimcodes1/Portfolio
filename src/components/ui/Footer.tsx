@@ -1,121 +1,90 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-import XLogo from "./svgs/XLogo";
-import WhatsAppIcon from "./svgs/WhatsApp";
-const Footer = () => {
-	const currentYear = new Date().getFullYear();
+import { Github, Linkedin, Mail } from 'lucide-react';
+import XLogo from './svgs/XLogo';
+import WhatsAppIcon from './svgs/WhatsApp';
 
-	const socialLinks = [
-		{
-			name: "GitHub",
-			url: "https://github.com/zimcodes1",
-			icon: <Github className="w-5 h-5" />,
-		},
-		{
-			name: "LinkedIn",
-			url: "https://www.linkedin.com/in/azimeh",
-			icon: <Linkedin className="w-5 h-5" />,
-		},
-		{ name: "X", url: "https://x.com/azimeho", icon: <XLogo /> },
-		{
-			name: "Email",
-			url: "mailto:azimehobadiah1@gmail.com",
-			icon: <Mail className="w-5 h-5" />,
-		},
-		{
-			name: "WhatsApp",
-			url: "https://wa.me/qr/SHDC4BMBJLIKH1",
-			icon: <WhatsAppIcon/>,
-		}
-	];
+const socialLinks = [
+  { name: 'GitHub',    url: 'https://github.com/zimcodes1',             icon: <Github className="w-4 h-4" /> },
+  { name: 'LinkedIn',  url: 'https://www.linkedin.com/in/azimeh',       icon: <Linkedin className="w-4 h-4" /> },
+  { name: 'X',         url: 'https://x.com/azimeho',                    icon: <XLogo /> },
+  { name: 'Email',     url: 'mailto:azimehobadiah1@gmail.com',          icon: <Mail className="w-4 h-4" /> },
+  { name: 'WhatsApp',  url: 'https://wa.me/qr/SHDC4BMBJLIKH1',         icon: <WhatsAppIcon /> },
+];
 
-	return (
-		<footer className="bg-gray-900 border-t border-gray-800">
-			<div className="max-w-6xl mx-auto px-6 py-12">
-				<div className="grid md:grid-cols-3 gap-8">
-					{/* Brand */}
-					<div>
-						<div className="flex items-center mb-4">
-							<span className="text-xl font-bold">
-								<span className="text-cyan-400 font-mono">{"<"}</span>
-								<span className="text-cyan-400">Azimeh</span>
-								<span className="text-green-400 font-mono">{"/>"}</span>
-							</span>
-						</div>
-						<p className="text-gray-400 text-sm leading-relaxed">
-							Building secure, scalable web applications with modern
-							technologies. Fullstack developer with a focus on cybersecurity
-							and clean code.
-						</p>
-					</div>
+const navLinks = [
+  { label: 'Skills',    href: '#skills' },
+  { label: 'Projects',  href: '#projects' },
+  { label: 'About',     href: '#about' },
+  { label: 'Contact',   href: '#contact' },
+];
 
-					{/* Quick Links */}
-					<div>
-						<h3 className="text-green-400 font-semibold mb-4">Quick Links</h3>
-						<div className="space-y-2">
-							<a
-								href="#skills"
-								className="block text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-							>
-								Skills & Expertise
-							</a>
-							<a
-								href="#projects"
-								className="block text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-							>
-								Featured Projects
-							</a>
-							<a
-								href="#about"
-								className="block text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-							>
-								About & Timeline
-							</a>
-							<a
-								href="#contact"
-								className="block text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-							>
-								Contact Me
-							</a>
-						</div>
-					</div>
+const Footer = () => (
+  <footer style={{ background: '#0f0f0f', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+    <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="grid sm:grid-cols-3 gap-10 mb-10">
 
-					{/* Social & Contact */}
-					<div>
-						<h3 className="text-green-400 font-semibold mb-4">Connect</h3>
-						<div className="flex gap-4 mb-4">
-							{socialLinks.map((link) => (
-								<a
-									key={link.name}
-									href={link.url}
-									className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 hover:border-cyan-400/50 border text-cyan-400 border-gray-700 transition-all duration-300"
-									title={link.name}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{link.icon}
-								</a>
-							))}
-						</div>
-						<p className="text-gray-400 text-sm">
-							Let's build something great together
-						</p>
-					</div>
-				</div>
+        {/* Brand */}
+        <div className="flex flex-col gap-3">
+          <span className="font-mono font-bold text-white text-lg">
+            Azimeh Nasara<span style={{ color: '#05df72' }}> Obadiah</span>
+          </span>
+          <p className="text-white/35 text-xs leading-relaxed max-w-56">
+            Building secure, scalable web applications with modern technologies and a security-first mindset.
+          </p>
+        </div>
 
-				{/* Bottom Bar */}
-				<div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-					<p className="text-gray-400 text-sm">
-						© {currentYear} Obadiah Azimeh Nasara
-					</p>
-					<div className="flex gap-4 mt-4 md:mt-0">
-						<span className="text-gray-500 text-xs font-mono select-none pointer-events-none ">
-							git commit -m "Building tomorrow"
-						</span>
-					</div>
-				</div>
-			</div>
-		</footer>
-	);
-};
+        {/* Quick links */}
+        <div className="flex flex-col gap-3">
+          <h3 className="text-white/60 text-xs font-mono tracking-widest uppercase">Quick Links</h3>
+          <div className="flex flex-col gap-2">
+            {navLinks.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="text-white/40 hover:text-white text-sm transition-colors duration-200 w-fit"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Connect */}
+        <div className="flex flex-col gap-3">
+          <h3 className="text-white/60 text-xs font-mono tracking-widest uppercase">Connect</h3>
+          <div className="flex gap-2 flex-wrap">
+            {socialLinks.map(({ name, url, icon }) => (
+              <a
+                key={name}
+                href={url}
+                target={url.startsWith('mailto') ? undefined : '_blank'}
+                rel="noopener noreferrer"
+                aria-label={name}
+                className="p-2.5 rounded-lg border border-white/8 text-white/40 hover:text-white hover:border-white/25 transition-all duration-200"
+                style={{ background: 'rgba(255,255,255,0.04)' }}
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+          <p className="text-white/25 text-xs">Let's build something great together.</p>
+        </div>
+
+      </div>
+
+      {/* Bottom bar */}
+      <div
+        className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6"
+        style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
+      >
+        <p className="text-white/25 text-xs font-mono">
+          © {new Date().getFullYear()} Azimeh Obadiah Nasara. All rights reserved.
+        </p>    
+        <span className="text-white/15 text-xs font-mono select-none">
+          git commit -m "Building tomorrow"
+        </span>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;

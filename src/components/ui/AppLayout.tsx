@@ -5,14 +5,11 @@ import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
-import AnimatedBackground from './AnimatedBackground';
 
 const AppLayout: React.FC = () => {
   return (
-    <div className="min-h-screen bg-black text-white relative">
-      <AnimatedBackground />
+<div className="min-h-screen bg-black text-white relative">
       <Navigation />
-      
       <main>
         <section id="home">
           <HeroSection />

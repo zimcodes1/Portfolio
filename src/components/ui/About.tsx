@@ -60,16 +60,11 @@ const About = () => (
         >
           {/* Photo */}
           <div className="relative w-fit mx-auto lg:mx-0">
-            {/* accent border */}
-            <div
-              className="absolute -inset-1 rounded-2xl blur-sm opacity-40"
-              style={{ background: 'linear-gradient(135deg, #05df72, transparent)' }}
-            />
             <div className="relative rounded-2xl overflow-hidden border border-white/10 w-64 h-72 sm:w-72 sm:h-80">
               <img
                 src="/images/me.jpg"
                 alt="Azimeh Obadiah Nasara"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-top grayscale-100"
               />
               {/* subtle bottom fade */}
               <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 to-transparent" />

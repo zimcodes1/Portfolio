@@ -10,10 +10,10 @@ import BackToTop from './components/ui/BackToTop';
 
 const AppLayout: React.FC = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navigation />
       
-      <main>
+      <main className="overflow-x-hidden">
         <section id="home">
           <Hero />
         </section>
