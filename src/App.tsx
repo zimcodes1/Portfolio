@@ -6,13 +6,11 @@ import Projects from './components/ui/Projects';
 import About from './components/ui/About';
 import Contact from './components/ui/Contact';
 import Footer from './components/ui/Footer';
-import AnimatedBackground from './components/ui/AnimatedBackground';
 import BackToTop from './components/ui/BackToTop';
 
 const AppLayout: React.FC = () => {
   return (
-    <div className="min-h-screen overflow-hidden bg-black text-white relative">
-      <AnimatedBackground />
+    <div className="min-h-screen bg-black text-white">
       <Navigation />
       
       <main>
