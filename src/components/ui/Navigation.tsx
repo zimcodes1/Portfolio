@@ -33,9 +33,9 @@ const Navigation = () => {
 							))}
 							<button
 								onClick={() => window.open("/resume.pdf", "_blank")}
-								className="flex gap-1 items-center p-2 md:px-4 md:py-2 bg-white md:bg-gradient-to-r from-cyan-500 to-green-500 rounded-full md:rounded-3xl text-black font-semibold text-sm hover:shadow-sm hover:shadow-cyan-500/50 transition-all duration-300"
+								className="flex gap-1 items-center p-2 md:px-4 md:py-2 bg-white md:bg-[#05df72] rounded-full md:rounded-3xl text-black font-semibold text-sm hover:shadow-sm hover:shadow-cyan-500/50 transition-all duration-300"
 							>
-								<p className="hidden md:inline">My Resumé </p><ArrowDown /> 
+								<p className="hidden md:inline">Resumé </p><ArrowDown /> 
 							</button>
 						</div>
 		</nav>
