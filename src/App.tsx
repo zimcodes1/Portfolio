@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './components/ui/Navigation';
-import Hero from './components/ui/Hero';
+import Hero from './components/ui/HeroSection';
 import Skills from './components/ui/Skills';
 import Projects from './components/ui/Projects';
 import About from './components/ui/About';

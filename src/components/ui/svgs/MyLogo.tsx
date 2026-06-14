@@ -1,0 +1,31 @@
+export const MyLogo = ({
+	color,
+	height,
+	width,
+}: {
+	color?: string | undefined;
+	height?: number | undefined;
+	width?: number | undefined;
+}) => {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width={width ? width : 50}
+			height={height ?  height : 50}
+			viewBox="0 8 24 14"
+			fill="#000000"
+		>
+			<g
+				fill="none"
+				stroke={color ? color : `#ffffff`}
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="1.5"
+				color="currentColor"
+			>
+				<circle cx="12" cy="14" r="2" />
+				<path d="M7.528 18a6 6 0 1 1 8.944 0" />
+			</g>
+		</svg>
+	);
+};

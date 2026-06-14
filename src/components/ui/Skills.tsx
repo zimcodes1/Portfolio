@@ -56,7 +56,7 @@ const Skills = () => {
           className="text-4xl font-bold text-center mb-16"
         >
           <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
-            Technical Expertise
+              My Skills
           </span>
         </motion.h2>
         

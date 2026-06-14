@@ -1,5 +1,5 @@
 import Navigation from './Navigation';
-import Hero from './Hero';
+import HeroSection from './HeroSection';
 import Skills from './Skills';
 import Projects from './Projects';
 import About from './About';
@@ -15,7 +15,7 @@ const AppLayout: React.FC = () => {
       
       <main>
         <section id="home">
-          <Hero />
+          <HeroSection />
         </section>
         
         <section id="skills">
