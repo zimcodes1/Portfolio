@@ -22,9 +22,9 @@ const NavItem = ({
 			href={href}
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
-			className={`${highlighted? "px-4 py-3 ": ''}flex items-center gap-2 rounded-full transition-colors duration-200 text-sm`}
+			className={`${highlighted? "px-4 py-3 ": ''} md:px-4 md:py-3 flex items-center gap-2 rounded-full transition-colors duration-200 text-sm`}
 			style={{
-				background: highlighted ? "#05df72" : "transparent",
+				background: highlighted ? "#fff" : "transparent",
 				color: highlighted ? "#000" : "rgba(255,255,255,0.6)",
 			}}
 		>
