@@ -71,7 +71,7 @@ const Navigation = () => {
 
 	return (
 		<nav
-			className="fixed bottom-5 left-1/2 -translate-x-1/2 w-fit backdrop-blur-sm border border-white/10 rounded-full z-50 px-3 py-2"
+			className="fixed bottom-5 left-1/2 -translate-x-1/2 w-fit max-sm:w-9/10 backdrop-blur-sm border border-white/10 rounded-full z-50 px-3 py-2"
 			style={{ background: "rgba(0,0,0,0.6)" }}
 		>
 			<div className="flex items-center gap-2">
