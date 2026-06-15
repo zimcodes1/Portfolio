@@ -1,26 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-	HomeIcon,
-	BrainCircuit,
-	LayoutListIcon,
-	BadgeInfoIcon,
-	MessageCircleMore,
-	ArrowDown,
-} from "lucide-react";
-
-const navItems = [
-	{ name: "Home",     href: "#home",     id: "home",     icon: <HomeIcon className="w-5 h-5" /> },
-	{ name: "Skills",   href: "#skills",   id: "skills",   icon: <BrainCircuit className="w-5 h-5" /> },
-	{ name: "Projects", href: "#projects", id: "projects", icon: <LayoutListIcon className="w-5 h-5" /> },
-	{ name: "About",    href: "#about",    id: "about",    icon: <BadgeInfoIcon className="w-5 h-5" /> },
-	{ name: "Contact",  href: "#contact",  id: "contact",  icon: <MessageCircleMore className="w-5 h-5" /> },
-];
+import { ArrowDown } from "lucide-react";
+import { navItems } from "../../utils/dataStore";
 
 const NavItem = ({
-	name, href, icon, active,
+	name,
+	href,
+	icon,
+	active,
 }: {
-	name: string; href: string; icon: React.ReactNode; active: boolean;
+	name: string;
+	href: string;
+	icon: React.ReactNode;
+	active: boolean;
 }) => {
 	const [hovered, setHovered] = useState(false);
 	const highlighted = active || hovered;
@@ -32,8 +24,8 @@ const NavItem = ({
 			onMouseLeave={() => setHovered(false)}
 			className="flex items-center gap-2 px-4 py-3 rounded-full transition-colors duration-200 text-sm"
 			style={{
-				background: highlighted ? '#05df72' : 'transparent',
-				color: highlighted ? '#000' : 'rgba(255,255,255,0.6)',
+				background: highlighted ? "#05df72" : "transparent",
+				color: highlighted ? "#000" : "rgba(255,255,255,0.6)",
 			}}
 		>
 			{icon}
@@ -41,9 +33,9 @@ const NavItem = ({
 				{highlighted && (
 					<motion.span
 						initial={{ width: 0, opacity: 0 }}
-						animate={{ width: 'auto', opacity: 1 }}
+						animate={{ width: "auto", opacity: 1 }}
 						exit={{ width: 0, opacity: 0 }}
-						transition={{ duration: 0.2, ease: 'easeInOut' }}
+						transition={{ duration: 0.2, ease: "easeInOut" }}
 						className="overflow-hidden whitespace-nowrap font-medium text-xs"
 					>
 						{name}
@@ -68,7 +60,7 @@ const Navigation = () => {
 				([entry]) => {
 					if (entry.isIntersecting) setActiveSection(id);
 				},
-				{ threshold: 0.4 }
+				{ threshold: 0.4 },
 			);
 			observer.observe(el);
 			observers.push(observer);
@@ -80,7 +72,7 @@ const Navigation = () => {
 	return (
 		<nav
 			className="fixed bottom-5 left-1/2 -translate-x-1/2 w-fit backdrop-blur-sm border border-white/10 rounded-full z-50 px-3 py-2"
-			style={{ background: 'rgba(0,0,0,0.6)' }}
+			style={{ background: "rgba(0,0,0,0.6)" }}
 		>
 			<div className="flex items-center gap-2">
 				{navItems.map((item) => (
@@ -91,9 +83,9 @@ const Navigation = () => {
 					/>
 				))}
 				<button
-					onClick={() => window.open('/resume.pdf', '_blank')}
+					onClick={() => window.open("/resume.pdf", "_blank")}
 					className="hidden md:flex gap-1.5 items-center px-4 py-2.5 rounded-full text-black font-semibold text-sm transition-opacity duration-200 hover:opacity-85 ml-1"
-					style={{ background: '#05df72' }}
+					style={{ background: "#05df72" }}
 				>
 					Resumé <ArrowDown className="w-4 h-4" />
 				</button>

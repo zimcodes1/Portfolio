@@ -104,25 +104,34 @@ export const navLinks = [
 
 //Navitems for the Navigation Menu
 export const navItems = [
-	{ name: "Home", href: "#home", icon: <HomeIcon className="w-5 h-5" /> },
+	{
+		name: "Home",
+		href: "#home",
+		id: "home",
+		icon: <HomeIcon className="w-5 h-5" />,
+	},
 	{
 		name: "Skills",
 		href: "#skills",
+		id: "skills",
 		icon: <BrainCircuit className="w-5 h-5" />,
 	},
 	{
 		name: "Projects",
 		href: "#projects",
+		id: "projects",
 		icon: <LayoutListIcon className="w-5 h-5" />,
 	},
 	{
 		name: "About",
 		href: "#about",
+		id: "about",
 		icon: <BadgeInfoIcon className="w-5 h-5" />,
 	},
 	{
 		name: "Contact",
 		href: "#contact",
+		id: "contact",
 		icon: <MessageCircleMore className="w-5 h-5" />,
 	},
 ];
