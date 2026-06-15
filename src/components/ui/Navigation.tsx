@@ -49,10 +49,10 @@ const NavItem = ({
 			href={href}
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
-			className="flex items-center p-2 py-3 rounded-full transition-colors duration-200 text-sm"
+			className="flex items-center p-2 md:py-3 rounded-full transition-colors duration-200 text-sm"
 			style={{
-				background: hovered ? "md:#05df72" : "transparent",
-				color: hovered ? "md:#000" : "rgba(255,255,255,0.6)",
+				background: hovered ? "#05df72" : "transparent",
+				color: hovered ? "#000" : "rgba(255,255,255,0.6)",
 			}}
 		>
 			{icon}
@@ -75,10 +75,10 @@ const NavItem = ({
 
 const Navigation = () => (
 	<nav
-		className="fixed bottom-5 left-1/2 -translate-x-1/2 w-fit backdrop-blur-sm border border-white/10 rounded-full z-50 px-3 py-2"
+		className="fixed bottom-5 left-1/2 -translate-x-1/2 w-9/10 md:w-fit backdrop-blur-sm border border-white/10 rounded-full z-50 px-3 py-2"
 		style={{ background: "rgba(0,0,0,0.6)" }}
 	>
-		<div className="flex items-center gap-2">
+		<div className="flex items-center gap-2 py-1">
 			{navItems.map((item) => (
 				<NavItem key={item.name} {...item} />
 			))}
