@@ -89,7 +89,7 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <p className="text-xs font-mono tracking-widest text-white/30 uppercase mb-3">Don't be a stranger</p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white ubuntu-bold">
             Let's <span style={{ color: '#05df72' }}>Connect</span>
           </h2>
           <div className="mx-auto mt-4 h-px w-16" style={{ background: '#05df72' }} />

@@ -24,8 +24,8 @@ const Footer = () => (
 
         {/* Brand */}
         <div className="flex flex-col gap-3">
-          <span className="font-mono font-bold text-white text-lg">
-            Azimeh Nasara<span style={{ color: '#05df72' }}> Obadiah</span>
+          <span className="font-mono font-bold text-white text-lg ubuntu-bold">
+            Azimeh Nasara<span className='ubuntu-bold' style={{ color: '#05df72' }}> Obadiah</span>
           </span>
           <p className="text-white/35 text-xs leading-relaxed max-w-56">
             Building secure, scalable web applications with modern technologies and a security-first mindset.

@@ -9,7 +9,7 @@ const HeroSection = () => {
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
 			<AnimatedBackground />
 
-			<div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+			<div className="relative z-10 max-w-4xl mx-auto px-6 max-sm:px-4 text-center">
 				{/* Eyebrow tag */}
 				<motion.div
 					initial={{ opacity: 0, y: 10 }}
@@ -29,10 +29,10 @@ const HeroSection = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.1 }}
-					className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-4"
+					className="ubuntu-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-4"
 				>
 					Azimeh Nasara
-					<span className="block" style={{ color: "#05df72" }}>
+					<span className="block ubuntu-bold" style={{ color: "#05df72" }}>
 						Obadiah.
 					</span>
 				</motion.h1>

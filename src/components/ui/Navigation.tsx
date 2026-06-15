@@ -6,18 +6,42 @@ import {
 	LayoutListIcon,
 	BadgeInfoIcon,
 	MessageCircleMore,
-	ArrowDown
+	ArrowDown,
 } from "lucide-react";
 
 const navItems = [
-	{ name: "Home",     href: "#home",     icon: <HomeIcon className="w-5 h-5" /> },
-	{ name: "Skills",   href: "#skills",   icon: <BrainCircuit className="w-5 h-5" /> },
-	{ name: "Projects", href: "#projects", icon: <LayoutListIcon className="w-5 h-5" /> },
-	{ name: "About",    href: "#about",    icon: <BadgeInfoIcon className="w-5 h-5" /> },
-	{ name: "Contact",  href: "#contact",  icon: <MessageCircleMore className="w-5 h-5" /> },
+	{ name: "Home", href: "#home", icon: <HomeIcon className="w-5 h-5" /> },
+	{
+		name: "Skills",
+		href: "#skills",
+		icon: <BrainCircuit className="w-5 h-5" />,
+	},
+	{
+		name: "Projects",
+		href: "#projects",
+		icon: <LayoutListIcon className="w-5 h-5" />,
+	},
+	{
+		name: "About",
+		href: "#about",
+		icon: <BadgeInfoIcon className="w-5 h-5" />,
+	},
+	{
+		name: "Contact",
+		href: "#contact",
+		icon: <MessageCircleMore className="w-5 h-5" />,
+	},
 ];
 
-const NavItem = ({ name, href, icon }: { name: string; href: string; icon: React.ReactNode }) => {
+const NavItem = ({
+	name,
+	href,
+	icon,
+}: {
+	name: string;
+	href: string;
+	icon: React.ReactNode;
+}) => {
 	const [hovered, setHovered] = useState(false);
 
 	return (
@@ -27,8 +51,8 @@ const NavItem = ({ name, href, icon }: { name: string; href: string; icon: React
 			onMouseLeave={() => setHovered(false)}
 			className="flex items-center p-2 py-3 rounded-full transition-colors duration-200 text-sm"
 			style={{
-				background: hovered ? '#05df72' : 'transparent',
-				color: hovered ? '#000' : 'rgba(255,255,255,0.6)',
+				background: hovered ? "md:#05df72" : "transparent",
+				color: hovered ? "md:#000" : "rgba(255,255,255,0.6)",
 			}}
 		>
 			{icon}
@@ -36,10 +60,10 @@ const NavItem = ({ name, href, icon }: { name: string; href: string; icon: React
 				{hovered && (
 					<motion.span
 						initial={{ width: 0, opacity: 0 }}
-						animate={{ width: 'auto', opacity: 1 }}
+						animate={{ width: "auto", opacity: 1 }}
 						exit={{ width: 0, opacity: 0 }}
-						transition={{ duration: 0.2, ease: 'easeInOut' }}
-						className="overflow-hidden whitespace-nowrap font-medium text-xs"
+						transition={{ duration: 0.2, ease: "easeInOut" }}
+						className="max-sm:hidden overflow-hidden whitespace-nowrap font-medium text-xs"
 					>
 						{name}
 					</motion.span>
@@ -50,17 +74,18 @@ const NavItem = ({ name, href, icon }: { name: string; href: string; icon: React
 };
 
 const Navigation = () => (
-	<nav className="fixed bottom-5 left-1/2 -translate-x-1/2 w-fit backdrop-blur-sm border border-white/10 rounded-full z-50 px-3 py-2"
-		style={{ background: 'rgba(0,0,0,0.6)' }}
+	<nav
+		className="fixed bottom-5 left-1/2 -translate-x-1/2 w-fit backdrop-blur-sm border border-white/10 rounded-full z-50 px-3 py-2"
+		style={{ background: "rgba(0,0,0,0.6)" }}
 	>
 		<div className="flex items-center gap-2">
 			{navItems.map((item) => (
 				<NavItem key={item.name} {...item} />
 			))}
 			<button
-				onClick={() => window.open('/resume.pdf', '_blank')}
+				onClick={() => window.open("/resume.pdf", "_blank")}
 				className="flex gap-1.5 items-center px-4 py-2.5 rounded-full text-black font-semibold text-sm transition-opacity duration-200 hover:opacity-85 ml-1"
-				style={{ background: '#05df72' }}
+				style={{ background: "#05df72" }}
 			>
 				Resumé <ArrowDown className="w-4 h-4" />
 			</button>

@@ -65,7 +65,7 @@ const Projects = () => (
         className="text-center mb-16"
       >
         <p className="text-xs font-mono tracking-widest text-white/30 uppercase mb-3">What I've built</p>
-        <h2 className="text-4xl sm:text-5xl font-bold text-white">
+        <h2 className="text-4xl sm:text-5xl font-bold text-white ubuntu-bold">
           Featured <span style={{ color: '#05df72' }}>Projects</span>
         </h2>
         <div className="mx-auto mt-4 h-px w-16" style={{ background: '#05df72' }} />
