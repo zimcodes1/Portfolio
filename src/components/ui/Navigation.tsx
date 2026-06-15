@@ -1,37 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-	HomeIcon,
-	BrainCircuit,
-	LayoutListIcon,
-	BadgeInfoIcon,
-	MessageCircleMore,
-	ArrowDown,
-} from "lucide-react";
-
-const navItems = [
-	{ name: "Home", href: "#home", icon: <HomeIcon className="w-5 h-5" /> },
-	{
-		name: "Skills",
-		href: "#skills",
-		icon: <BrainCircuit className="w-5 h-5" />,
-	},
-	{
-		name: "Projects",
-		href: "#projects",
-		icon: <LayoutListIcon className="w-5 h-5" />,
-	},
-	{
-		name: "About",
-		href: "#about",
-		icon: <BadgeInfoIcon className="w-5 h-5" />,
-	},
-	{
-		name: "Contact",
-		href: "#contact",
-		icon: <MessageCircleMore className="w-5 h-5" />,
-	},
-];
+import { ArrowDown } from "lucide-react";
+import { navItems } from "../../utils/dataStore";
 
 const NavItem = ({
 	name,

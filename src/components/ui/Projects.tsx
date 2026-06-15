@@ -1,56 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
-
-const projects = [
-  {
-    title: "Libronet",
-    description: "Open-source E-library website for books.",
-    image: "/images/projects/libronet.png",
-    tech: ["React", "TypeScript", "Tailwind", "Django"],
-    github: "https://github.com/zimcodes1/E-Library",
-    demo: "https://libronet.vercel.app/",
-  },
-  {
-    title: "Dispensar",
-    description: "Pharmacy management — simplified and powerful.",
-    image: "/images/projects/dispensar.png",
-    tech: ["React", "TypeScript", "Django"],
-    github: "https://github.com/zimcodes1/Dispensar",
-    demo: "https://dispensar.vercel.app",
-  },
-  {
-    title: "PhishShield",
-    description: "AI-Powered Phishing detection system for email and web apps",
-    image: "/images/projects/phishshield.png",
-    tech: ["React", "Tailwind", "Python", "Manifest v3", "FastAPI"],
-    github: "https://github.com/zimcodes1/PHISHIELD",
-    demo: "https://phishield-ai.vercel.app/",
-  },
-  {
-    title: "Medika",
-    description: "Search & find your favourite doctor.",
-    image: "/images/projects/medika.png",
-    tech: ["React", "JavaScript", "Tailwind"],
-    github: "https://github.com/zimcodes1/MEDIKA",
-    demo: "https://medika-azi.vercel.app/",
-  },
-  {
-    title: "Spotify Clone",
-    description: "Discover a world of music and podcasts.",
-    image: "/images/projects/spotify.png",
-    tech: ["React", "Tailwind"],
-    github: "https://github.com/zimcodes1/Spotify-Clone",
-    demo: "https://spotify-clone-azi.vercel.app/",
-  },
-  {
-    title: "WEDA",
-    description: "Real-time weather app with forecasts via OpenMeteo API.",
-    image: "/images/projects/weda.png",
-    tech: ["React", "TypeScript", "OpenMeteo API", "Tailwind"],
-    github: "https://github.com/zimcodes1/WEDA",
-    demo: "https://weda-azi.vercel.app/",
-  },
-];
+import { projects } from '../../utils/dataStore';
 
 const Projects = () => (
   <section id="projects" className="py-24 bg-[#0a0a0a]">

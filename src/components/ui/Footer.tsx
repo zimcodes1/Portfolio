@@ -1,21 +1,5 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
-import XLogo from './svgs/XLogo';
-import WhatsAppIcon from './svgs/WhatsApp';
-
-const socialLinks = [
-  { name: 'GitHub',    url: 'https://github.com/zimcodes1',             icon: <Github className="w-4 h-4" /> },
-  { name: 'LinkedIn',  url: 'https://www.linkedin.com/in/azimeh',       icon: <Linkedin className="w-4 h-4" /> },
-  { name: 'X',         url: 'https://x.com/azimeho',                    icon: <XLogo /> },
-  { name: 'Email',     url: 'mailto:azimehobadiah1@gmail.com',          icon: <Mail className="w-4 h-4" /> },
-  { name: 'WhatsApp',  url: 'https://wa.me/qr/SHDC4BMBJLIKH1',         icon: <WhatsAppIcon /> },
-];
-
-const navLinks = [
-  { label: 'Skills',    href: '#skills' },
-  { label: 'Projects',  href: '#projects' },
-  { label: 'About',     href: '#about' },
-  { label: 'Contact',   href: '#contact' },
-];
+import { navLinks } from "../../utils/dataStore";
+import { socialLinks } from "../../utils/dataStore";
 
 const Footer = () => (
   <footer style={{ background: '#0f0f0f', borderTop: '1px solid rgba(255,255,255,0.06)' }}>

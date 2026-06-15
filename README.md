@@ -2,7 +2,7 @@
 
 ## 🚀 Fullstack Developer & Cybersecurity Specialist
 
-Professional portfolio showcasing my expertise in React, Node.js, Python, and Cybersecurity.
+Professional portfolio showcasing my expertise in Software Development.
 
 ### 🌟 Features
 
@@ -25,19 +25,19 @@ Professional portfolio showcasing my expertise in React, Node.js, Python, and Cy
 ### 📦 Installation
 
 ```bash
-npm install
+yarn install
 ```
 
 ### 🏃 Development
 
 ```bash
-npm run dev
+yarn run dev
 ```
 
 ### 🏗️ Build
 
 ```bash
-npm run build
+yarn run build
 ```
 
 ### 🌐 SEO Features
@@ -59,8 +59,8 @@ npm run build
 
 ### 📄 License
 
-© 2024 Azimeh Obadiah Nasara. All rights reserved.
+© 2026 Azimeh Obadiah Nasara. All rights reserved.
 
 ---
 
-**Keywords**: Fullstack Developer, React Developer, Node.js, Python, Cybersecurity, Web Development, TypeScript, Portfolio
+**Keywords**: Software Developer, Mobile Developer, React, Node.js, Python, Cybersecurity, Web Development, TypeScript, Portfolio

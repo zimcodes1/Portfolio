@@ -1,26 +1,6 @@
 import { Globe, Smartphone, Shield, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-const timeline = [
-  {
-    year: '2020 – 2023',
-    title: 'Diploma in Computer Science',
-    description: 'Foundational studies covering programming, data structures, algorithms, and software development principles.',
-    done: true,
-  },
-  {
-    year: '2023 – 2024',
-    title: 'Community & Hackathons',
-    description: 'Participated in tech communities, hackathons, and open-source projects to sharpen practical skills.',
-    done: true,
-  },
-  {
-    year: '2024 – Present',
-    title: 'B.Sc Cybersecurity',
-    description: 'Pursuing a Bachelor\'s in Cybersecurity — network security, ethical hacking, cryptography, and secure development.',
-    done: false,
-  },
-];
+import { timeline } from '../../utils/dataStore';
 
 const traits = [
   { icon: <Globe className="w-4 h-4" />,     label: 'Fullstack Development' },
@@ -67,7 +47,7 @@ const About = () => (
                 className="w-full h-full object-cover object-top grayscale-100"
               />
               {/* subtle bottom fade */}
-              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-black/60 to-transparent" />
             </div>
             {/* floating badge */}
             <div
@@ -121,7 +101,7 @@ const About = () => (
 
           <div className="relative flex flex-col gap-0">
             {/* vertical line */}
-            <div className="absolute left-[7px] top-2 bottom-2 w-px bg-white/8" />
+            <div className="absolute left-1.75 top-2 bottom-2 w-px bg-white/8" />
 
             {timeline.map((item, idx) => (
               <motion.div
@@ -133,7 +113,7 @@ const About = () => (
                 className="relative flex gap-5 pb-8 last:pb-0"
               >
                 {/* dot */}
-                <div className="relative z-10 mt-1 flex-shrink-0">
+                <div className="relative z-10 mt-1 shrink-0">
                   <div
                     className="w-3.5 h-3.5 rounded-full border-2"
                     style={{

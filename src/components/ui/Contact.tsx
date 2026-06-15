@@ -1,38 +1,10 @@
 import { useState } from 'react';
-import { Mail, Linkedin, Github } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'sonner';
 import { motion } from 'framer-motion';
-import WhatsAppIcon from './svgs/WhatsApp';
+import { contacts } from '../../utils/dataStore';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
-
-const contacts = [
-  {
-    icon: <Mail className="w-4 h-4" />,
-    label: 'Email',
-    value: 'azimehobadiah1@gmail.com',
-    href: 'mailto:azimehobadiah1@gmail.com',
-  },
-  {
-    icon: <Linkedin className="w-4 h-4" />,
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/azimeh',
-    href: 'https://www.linkedin.com/in/azimeh',
-  },
-  {
-    icon: <Github className="w-4 h-4" />,
-    label: 'GitHub',
-    value: 'github.com/zimcodes1',
-    href: 'https://github.com/zimcodes1',
-  },
-  {
-    icon: <WhatsAppIcon />,
-    label: 'WhatsApp',
-    value: '+234 707 143 0030',
-    href: 'https://wa.me/qr/SHDC4BMBJLIKH1',
-  },
-];
 
 const inputClass =
   'w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white text-sm placeholder-white/25 font-mono focus:outline-none focus:border-[#05df72] transition-colors duration-200';
@@ -128,7 +100,7 @@ const Contact = () => {
                   }}
                 >
                   <div
-                    className="p-2 rounded-lg flex-shrink-0"
+                    className="p-2 rounded-lg shrink-0"
                     style={{ background: 'rgba(5,223,114,0.1)', color: '#05df72' }}
                   >
                     {icon}

@@ -44,7 +44,7 @@ const HeroSection = () => {
 					transition={{ duration: 0.6, delay: 0.2 }}
 					className="text-lg sm:text-xl font-mono text-white/40 mb-6 tracking-wide"
 				>
-					Fullstack Developer &amp; Cybersecurity Specialist
+					Software Developer &amp; Problem Solver
 				</motion.p>
 
 				{/* Divider */}
