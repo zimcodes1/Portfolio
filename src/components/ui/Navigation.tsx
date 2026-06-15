@@ -22,7 +22,7 @@ const NavItem = ({
 			href={href}
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
-			className="flex items-center gap-2 px-4 py-3 rounded-full transition-colors duration-200 text-sm"
+			className={`${highlighted? "px-4 py-3 ": ''}flex items-center gap-2 rounded-full transition-colors duration-200 text-sm`}
 			style={{
 				background: highlighted ? "#05df72" : "transparent",
 				color: highlighted ? "#000" : "rgba(255,255,255,0.6)",
@@ -71,10 +71,10 @@ const Navigation = () => {
 
 	return (
 		<nav
-			className="fixed bottom-5 left-1/2 -translate-x-1/2 w-fit max-sm:w-9/10 backdrop-blur-sm border border-white/10 rounded-full z-50 px-3 py-2"
+			className="fixed bottom-5 left-1/2 -translate-x-1/2 w-fit max-sm:w-9/10 backdrop-blur-sm border border-white/10 rounded-full z-50 px-2 py-2"
 			style={{ background: "rgba(0,0,0,0.6)" }}
 		>
-			<div className="flex items-center gap-2">
+			<div className="flex items-center justify-between gap-2">
 				{navItems.map((item) => (
 					<NavItem
 						key={item.name}
