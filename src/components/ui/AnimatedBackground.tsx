@@ -3,11 +3,11 @@ const AnimatedBackground = () => {
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {/* Subtle grid */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.15]"
         style={{
           backgroundImage: `
-            linear-gradient(rgb(255,255,255) 1px, transparent 1px),
-            linear-gradient(90deg, rgb(255,255,255) 1px, transparent 1px)
+            linear-gradient(rgb(5,223,114) 1px, transparent 1px),
+            linear-gradient(90deg, rgb(5,223,114) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
