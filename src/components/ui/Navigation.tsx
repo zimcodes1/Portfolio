@@ -50,23 +50,26 @@ const Navigation = () => {
 	const [activeSection, setActiveSection] = useState("home");
 
 	useEffect(() => {
-		const observers: IntersectionObserver[] = [];
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setActiveSection(entry.target.id);
+					}
+				});
+			},
+			{
+				rootMargin: "-25% 0px -35% 0px",
+				threshold: 0,
+			},
+		);
 
 		navItems.forEach(({ id }) => {
 			const el = document.getElementById(id);
-			if (!el) return;
-
-			const observer = new IntersectionObserver(
-				([entry]) => {
-					if (entry.isIntersecting) setActiveSection(id);
-				},
-				{ threshold: 0.4 },
-			);
-			observer.observe(el);
-			observers.push(observer);
+			if (el) observer.observe(el);
 		});
 
-		return () => observers.forEach((o) => o.disconnect());
+		return () => observer.disconnect();
 	}, []);
 
 	return (

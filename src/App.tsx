@@ -14,25 +14,11 @@ const AppLayout: React.FC = () => {
       <Navigation />
       
       <main className="overflow-x-hidden">
-        <section id="home">
-          <Hero />
-        </section>
-        
-        <section id="skills">
-          <Skills />
-        </section>
-        
-        <section id="projects">
-          <Projects />
-        </section>
-        
-        <section id="about">
-          <About />
-        </section>
-        
-        <section id="contact">
-          <Contact />
-        </section>
+        <Hero />
+        <Skills />
+        <Projects />
+        <About />
+        <Contact />
       </main>
       
       <Footer />

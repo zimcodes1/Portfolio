@@ -199,7 +199,7 @@ export const skillCategories = [
 		icon: <Code2 className="w-5 h-5" />,
 		skills: [
 			{ name: "React", img: cdn("react"), tier: "Advanced" },
-			{ name: "TypeScript", img: cdn("typescript"), tier: "Intermediate" },
+			{ name: "TypeScript", img: cdn("typescript"), tier: "Proficient" },
 			{
 				name: "Tailwind",
 				img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
@@ -226,17 +226,17 @@ export const skillCategories = [
 		title: "Mobile Development",
 		icon: <Smartphone className="w-5 h-5" />,
 		skills: [
-			{ name: "React Native", img: cdn("react"), tier: "Intermediate" },
+			{ name: "React Native", img: cdn("react"), tier: "Proficient" },
 			{
 				name: "Expo",
 				img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg",
 				tier: "Intermediate",
 			},
-			{ name: "Android", img: cdn("android"), tier: "Beginner" },
+			{ name: "Android", img: cdn("android"), tier: "Intermediate" },
 			{
 				name: "iOS",
 				img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
-				tier: "Beginner",
+				tier: "Intermediate",
 			},
 		],
 	},
@@ -275,22 +275,22 @@ export const skillCategories = [
 			{
 				name: "Network Security",
 				img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-				tier: "Beginner",
+				tier: "Intermediate",
 			},
 			{
 				name: "Penetration Testing",
 				img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
-				tier: "Beginner",
+				tier: "Intermediate",
 			},
 			{
 				name: "Cryptography",
 				img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-				tier: "Beginner",
+				tier: "Intermediate",
 			},
 			{
 				name: "Risk Assessment",
 				img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-				tier: "Beginner",
+				tier: "Intermediate",
 			},
 		],
 	},

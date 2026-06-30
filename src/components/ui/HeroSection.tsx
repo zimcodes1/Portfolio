@@ -1,13 +1,67 @@
+import { useRef, useState } from "react";
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import XLogo from "./svgs/XLogo";
 import WhatsAppIcon from "./svgs/WhatsApp";
 import AnimatedBackground from "./AnimatedBackground";
 
 const HeroSection = () => {
+	const containerRef = useRef<HTMLDivElement>(null);
+	const [isVisible, setIsVisible] = useState(false);
+
+	const radius = 60; // 120px diameter
+
+	const mouseX = useMotionValue(0);
+	const mouseY = useMotionValue(0);
+
+	const springConfig = { damping: 25, stiffness: 250, mass: 0.5 };
+	const xSpring = useSpring(mouseX, springConfig);
+	const ySpring = useSpring(mouseY, springConfig);
+
+	const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+		if (!containerRef.current) return;
+		const rect = containerRef.current.getBoundingClientRect();
+		const mouseXRelative = e.clientX - rect.left;
+		const mouseYRelative = e.clientY - rect.top;
+
+		const clampedX = Math.max(radius, Math.min(rect.width - radius, mouseXRelative));
+		const clampedY = Math.max(radius, Math.min(rect.height - radius, mouseYRelative));
+
+		mouseX.set(clampedX - radius);
+		mouseY.set(clampedY - radius);
+
+		if (!isVisible) {
+			setIsVisible(true);
+		}
+	};
+
 	return (
-		<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+		<section
+			ref={containerRef}
+			id="home"
+			onMouseMove={handleMouseMove}
+			onMouseLeave={() => setIsVisible(false)}
+			className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]"
+		>
 			<AnimatedBackground />
+
+			{/* Color-inverting interactive circle (desktop only) */}
+			<motion.div
+				className="absolute pointer-events-none rounded-full bg-white z-20 hidden md:block"
+				style={{
+					width: radius * 2,
+					height: radius * 2,
+					left: xSpring,
+					top: ySpring,
+					mixBlendMode: "difference",
+					opacity: isVisible ? 1 : 0,
+					scale: isVisible ? 1 : 0,
+				}}
+				transition={{
+					opacity: { duration: 0.15 },
+					scale: { duration: 0.25, type: "spring", stiffness: 300, damping: 25 },
+				}}
+			/>
 
 			<div className="relative z-10 max-w-4xl mx-auto px-6 max-sm:px-4 text-center">
 				{/* Eyebrow tag */}
