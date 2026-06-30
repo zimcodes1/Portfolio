@@ -47,7 +47,7 @@ const HeroSection = () => {
 
 			{/* Color-inverting interactive circle (desktop only) */}
 			<motion.div
-				className="absolute pointer-events-none rounded-full bg-white z-20 hidden md:block"
+				className="absolute pointer-events-none rounded-full bg-white z-20"
 				style={{
 					width: radius * 2,
 					height: radius * 2,
