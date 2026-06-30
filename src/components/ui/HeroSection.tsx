@@ -137,7 +137,7 @@ const HeroSection = () => {
 					</a>
 					<a
 						href="/resume.pdf"
-						download="My_Resume.pdf"
+						download="Azimeh_Resume.pdf"
 						className="px-8 py-3 rounded-lg font-semibold text-sm text-white border border-white/20 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
 					>
 						Download Resume <ArrowDown className="w-4 h-4" />
